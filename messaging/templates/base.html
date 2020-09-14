@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Messaging</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	ul {
+  font-family: monospace;
+  list-style-type: "💎"; 
+  margin: 2em;
+  padding: 0;
+  
+  li {
+    margin: 0;
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+    position: relative;
+    
+    &:after {
+      content: '';
+      height: .4em;
+      width: .4em;
+      background: #D2153A;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: .25em;
+      left: 0;
+    }
+    
+  }
+  
+}
+  </style>
+</head>
+<body>
+{% block page_content %}
+{% endblock %}
+</body>
+</html>

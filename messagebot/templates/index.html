@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<div class="container">
+  {%if params.error != None %}
+  <h3 class="text-center text-danger"> {{params.error}}</h3>
+  {%endif%}
+
+  <h2 class="text-center">Create Message</h2><br/>
+  <form method="POST" class="form-horizontal" action="/display">
+  	 {% csrf_token %}
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Message Name:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="name" placeholder="Enter Message Name" name="name">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="message">Message:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="5" cols="80" id="message" name="message"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="image">Photo:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="image" placeholder="Enter Image url" name="image">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="link">Link:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="link" placeholder="Enter Link url" name="link">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="link_text">Link Text:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="link_text" placeholder="Enter Link Text" name="link_text">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="order">Order:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="order" placeholder="Enter order" name="order">
+      </div>
+    </div>
+    
+	<div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+      	  <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+  	</div>
+  </form>
+</div>
+
+
+<br><br><br><br><br>
+<h2 class="text-success text-center">Information</h2>
+<div class="lead text-justify ">
+  <ul>
+<li><p class="text-warning"> Message Name should be unique and it is used for identifying the message</p></li>
+<li>
+<p class="text-primary"> Message is where you put your message and the variables you can use currently are :
+  <ul class="text-success">
+<li>LEAD_NAME</li>
+<li>COACH_NAME</li>
+<li>COACH_MOBILE</li>
+<li>COACH_EMAIL</li>
+<li>PRODUCT_LINK</li>
+<li>BUSINESS_LINK</li>
+<li>FACEBOOK_LINK</li>
+<li>INSTAGRAM_LINK</li>
+</ul></p></li>
+<li><p class="text-danger ">Photo you can store photo in your google drive or somewhere else and just provide the link here like this.
+  <br/>
+  ex:  https://image.shutterstock.com/image-photo/mountains-during-sunset-beautiful-natural-260nw-407021107.jpg</p></li>
+<li>  <p class="text-success"> Link you can save any file to your google drive or anywhere and provide the link here</p></li>
+  <li><p>Link text is display text for your link</p></li>
+<li>  <p class="text-dark">Order is which order you want to display it s value is MPL and if you have only image and link you can give PL or LP <br/>and if only message and image then MP or PM and if you have only message and link then you can use either ML or LM</p></li>
+</div>
+
+{% endblock %}

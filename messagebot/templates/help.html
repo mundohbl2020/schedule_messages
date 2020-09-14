@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Help</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  	ul {
+  font-family: monospace;
+  list-style-type: "💎"; 
+  margin: 2em;
+  padding: 0;
+  
+  li {
+    margin: 0;
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+    position: relative;
+    
+    &:after {
+      content: '';
+      height: .4em;
+      width: .4em;
+      background: #D2153A;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: .25em;
+      left: 0;
+    }
+    
+  }
+  
+  
+}
+  </style>
+</head>
+<body>
+
+<h1 class="text-center">How to use this messaging</h1>
+{%load static %}
+<div class="lead text-justify ">
+<ul>
+	<li><p class="text-primary"> This is the main screen</p>
+<img src="/static/1.62854d51c3b4.JPG"  height="400" alt="My image">
+</li>
+<li>
+<p class="text-danger"> Here you have five tables </p>
+<ul>
+	<li>After Registration which is used for creating events for registered user </li>
+	<li>EveryDays which is used to create events for daily messages</li>
+	<li>Specificdays which is used to create event for specific date time</li>
+	<li>Messages which is used to create messages which can be sent to user</li>
+	<li>Events are total evnts or messages in queue that are created </li>
+</ul>
+<img src="/static/2.b5735181177b.JPG"  height="400" alt="My image">
+</li>
+<br><li>
+<p> This image shows after how much time user gets message once he is registered</p></li>
+<li><p> click on Add After Registration on top right button to add new event here</p>
+
+<img src="/static/3.dd27c8361949.JPG"  height="400" alt="My image"></li>
+<br><li>
+<p> you specify after how many days after how hours after how many minutes after registration you want send message to user</p>
+<p> ex:  if you want to send after 3 hour 30 min after registration to user  then just fill 0 in days and 3 in hours and 30 in minutes</p></li>
+
+<li>
+<p> same goes for remaining everydays and specific days also</p>
+</li>
+<li>
+<p> events table is for backend purpose and you dont touch at all</p>
+</li>
+</ul>
+</div>
+</body>
+</html>

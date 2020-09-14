@@ -1,0 +1,12 @@
+
+<table border="0">
+{%for  event in events%}
+
+
+<tr>
+	<td>{{event.display_date}}</td><td>{{event.time}}</td>
+	<td>{{event.name}}</td><td>{{event.user}}</td></tr>
+
+{%endfor%}
+
+</table>
